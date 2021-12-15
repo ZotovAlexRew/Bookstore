@@ -16,6 +16,7 @@
     line-height: 60px
     color: #FAAD13
     margin-top: -5px
+    margin-left: 5px
     &__additionally
       font-family: Roboto Condensed
       font-style: normal
@@ -45,21 +46,21 @@
     color: #5A7184
     margin-left: 5px
     max-width: 585px
-  &-image
+  &-wrapper
     position: relative
-    width: 250px
-    height: 374px
-    display: block
-    margin-left: auto
-    margin-right: auto
-    margin-top: +22%
-.image
-  position: absolute
-  opacity: 0.1
-  &-block
-    width: 488px
-    height: 580px
-    background-color: #B3BAC5
+    &__image
+      position: absolute
+      width: 250px
+      height: 374px
+      display: block
+      margin: 103px 119px
+      background: rgba(0, 0, 0, 0.0001)
+      box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.08)
+    &__block
+      width: 488px
+      height: 580px
+      background-color: #B3BAC5
+      opacity: 0.1
 .sold
   margin-top: 56px
   &-button
@@ -80,15 +81,15 @@
     &__2
       font-style: normal
       font-weight: bold
-      font-size: 16px
-      line-height: 22px
+      font-size: 18px
+      line-height: 25px
       text-align: center
       text-transform: uppercase
       color: #1565D8
       cursor: pointer
       outline: none
       border-radius: 8px
-      padding: 16px 55px 16px 55px
+      padding: 15px 48px 15px 48px
       border: 2px solid #1565D8
       background-color: #fff
       margin-left: 26px
