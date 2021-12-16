@@ -15,3 +15,21 @@ var swiper = new Swiper(".category-slider", {
     onlyInViewport: false,
   },
       });
+
+var swiper = new Swiper(".unreleased-slider", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+    nextEl: '.unreleased-slider__button--next',
+    prevEl: '.unreleased-slider__button--prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+      });
