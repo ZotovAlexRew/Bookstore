@@ -1,6 +1,10 @@
 .unreleased
   background-color: #183B56
-  padding-bottom: 88px
+  padding-bottom: 76px
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
   &-wrapper
     display: flex
     align-items: center
@@ -15,10 +19,12 @@
     line-height: 48px
     letter-spacing: 0.2px
     color: #FFFFFF
+    margin-top: 0
   &__books
     width: 204px
     height: 298px
     border-radius: 8px
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
   &-slider
     &__button
       background-repeat: no-repeat
@@ -30,7 +36,5 @@
       cursor: pointer
       width: 54px
       height: 56px
-      right: 0
-      top: 0
       &--next
         margin-left: 24px
