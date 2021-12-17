@@ -1,6 +1,6 @@
 var swiper = new Swiper(".category-slider", {
         slidesPerView: 4,
-        spaceBetween: 27,
+        spaceBetween: 26,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
