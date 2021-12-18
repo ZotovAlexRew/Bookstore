@@ -1,6 +1,9 @@
 @media ( max-width: 1199px )
   .container
     max-width: 960px
+  .thank
+    &-container
+      max-width: 960px
   .design
     padding-top: 35px
     &-wrapper
@@ -111,6 +114,9 @@
 @media (max-width: 992px)
   .container
     max-width: 737px
+  .thank
+    &-container
+      max-width: 737px
   .navbar
     &-menu
       &__item
@@ -222,6 +228,9 @@
 @media (max-width: 767px)
   .container
     max-width: 87%
+  .thank
+    &-container
+      max-width: 87%
   body
     margin-top: 70px
   .navbar
@@ -364,9 +373,17 @@
       margin-bottom: 20px
     &__politics
       display: none
+  .categories
+    &__container
+      height: 450px
+    &__slider
+      height: 450px
 @media (max-width: 575px)
   .container
     max-width: 85%
+  .thank
+    &-container
+      max-width: 85%
   .button
     display: flex
     flex-direction: column
@@ -458,9 +475,42 @@
       &-top
         flex-direction: column
         align-items: center
+  .slide
+    &-unreleased
+      &__wrapp
+        margin: 0 auto
+    &-block
+      &__name
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 10px
+      &__subname
+        font-size: 12px
+        line-height: 20px
+      &__text
+        width: 100%
+        align-items: center
+    &-categories
+      &__block
+        width: 140px
+        height: 182px
+        padding: 20px 24px 12px 24px
+    &__img
+      width: 36px
+      height: 36px
+      margin-bottom: 16px
+  .slider
+    &-categories
+      &__wrapper
+        flex-wrap: wrap
+        width: 1199px
+        overflow: hidden
 @media (max-width: 480px) and (min-width: 320px)
   .container
     max-width: 280px
+  .thank
+    &-container
+      max-width: 280px
   .navbar
     &__mobile
       &--fixed
@@ -745,7 +795,7 @@
         background: $light
         color: $blue
         border: 2px solid $blue
-  .action
+  .stock
     &__button
       &:hover
         text-decoration: underline
@@ -763,7 +813,7 @@
     &__link
       &:hover
         text-decoration: underline
-  .unedited
+  .unreleased
     &__button
       &:hover
         filter: drop-shadow(0 0.15rem 0.5rem #1565D8)
