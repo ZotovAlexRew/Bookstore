@@ -1,102 +1,99 @@
 .blog
   padding-top: 100px
-  padding-bottom: 75px
-  &-top
+  padding-bottom: 50px
+  position: relative
+  z-index: 100
+  &__left
+    width: 556px
     display: flex
-    justify-content: space-between
-    align-items: center
+    flex-direction: column
+    margin-right: 30px
   &__title
-    margin-top: 0
-    font-family: Roboto Condensed
+    font-family: 'Roboto Condensed', sans-serif
+    color: $dark
     font-style: normal
     font-weight: bold
     font-size: 48px
     line-height: 60px
-    letter-spacing: 0.2px
-    color: #183B56
-    margin-bottom: 0
+    margin-bottom: 40px
+    margin-top: 0
+  &__block
+    &-big
+      border-radius: 8px
+      margin-bottom: 26px
+  &__name
+    font-family: 'Roboto Condensed', sans-serif
+    color: $dark
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    margin-left: 11px
+  &__text
+    font-family: 'Open Sans', sans-serif
+    color: $text
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    margin-left: 11px
+  &-wrapper
+    display: flex
+  &__all
+    display: flex
+    justify-content: end
+    margin-bottom: 48px
   &__button
-    font-family: Roboto Condensed
+    border: 2px solid #1565D8
+    border-radius: 22px
+    padding: 9px 55px
+    margin-top: 8px
+    background-color: #fff
     font-style: normal
     font-weight: bold
     font-size: 16px
-    line-height: 22px
-    color: #1565D8
+    line-height: 20px
+    font-family: 'Roboto Condensed', sans-serif
     cursor: pointer
     outline: none
-    border-radius: 22px
-    width: 179px
-    height: 44px
-    text-align: center
-    border: 2px solid #1565D8
-    background-color: #fff
-  &-wrapper
-    margin-top: 40px
+    text-decoration: none
+    color: $blue
+  &__right
     display: flex
-    align-items: start
-  &-left
-    margin-right: 30px
-    &__image
-      height: 330px
-      margin-bottom: 30px
-    &__title
-      font-family: Roboto Condensed
-      font-style: normal
-      font-weight: bold
-      font-size: 24px
-      line-height: 32px
-      letter-spacing: 0.2px
-      color: #183B56
-      margin-top: -1px
-      margin-bottom: 16px
-      margin-left: 13px
-    &__text
-      font-style: normal
-      font-weight: normal
-      font-size: 18px
-      line-height: 32px
-      color: #5A7184
-      margin-top: -3px
-      margin-bottom: 0
-      margin-left: 13px
-  &-card
+    flex-direction: column
+  &__card
     display: flex
-    align-items: center
-    margin-bottom: 25px
-    &--1
-      width: 520px
-    &--2
-      width: 548px
-    &--3
-      width: 535px
-    &__title
-      font-family: Roboto
-      font-style: normal
-      font-weight: 500
-      font-size: 22px
-      line-height: 32px
-      letter-spacing: 0.2px
-      color: #183B56
-      margin-top: 0
-      margin-bottom: 18px
-    &__text
-      font-style: normal
-      font-weight: normal
-      font-size: 14px
-      line-height: 20px
-      color: #5A7184
-      margin-top: 0
-      margin-bottom: 16px
-    &__read
-      font-family: Roboto Condensed
-      font-style: normal
-      font-weight: bold
-      font-size: 16px
-      line-height: 20px
-      letter-spacing: 0.2px
-      color: #1665D8
-      margin: 0
-    &__image
-      width: 250px
-      height: 150px
+    margin-bottom: 27px
+    &-left
+      border-radius: 8px
       margin-right: 36px
+    &-right
+      display: flex
+      flex-direction: column
+  &__data
+    font-family: 'Open Sans', sans-serif
+    color: $text
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    margin-bottom: 16px
+    margin-top: 8px
+  &__subname
+    font-family: 'Roboto', sans-serif
+    color: $dark
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 32px
+    margin-bottom: 18px
+  &__read
+    font-family: 'Roboto Condensed', sans-serif
+    color: $blue
+    text-decoration: none
+    text-transform: uppercase
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px

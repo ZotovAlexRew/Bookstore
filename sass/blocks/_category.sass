@@ -1,67 +1,78 @@
-.category
-  padding-bottom: 100px
-  &-line
-    border: 1px solid #ECEEF2
-    margin-top: 0
-    margin-bottom: 60px
-  &-card
-    border-radius: 8px
-    border: 1px solid #ECEEF2
+.categories
+  &__container
+    position: relative
+    margin-bottom: 91px
+    padding-top: 53px
+    height: 300px
+.slide
+  &-button
+    position: absolute
+    background: #fff
+    width: 56px
+    height: 56px
+    border: none
+    cursor: pointer
+    z-index: 99
+    border-radius: 2000px
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
+    display: flex
+    align-items: center
+    justify-content: center
+    &__img
+      width: 14px
+      height: 18px
+    &--next
+      top: 48%
+      right: -25px
+    &--prev
+      top: 46%
+      left: -56px
+      transform: translate(50%, 10%)
+  &-categories
+    margin: 0
+    padding: 0
     width: 265px
-    height: 240px
-    &__image
-      width: 64px
-      height: 64px
-      margin-top: 40px
-      margin-bottom: 40px
-      margin-left: 100px
-    &__title
-      font-family: Roboto
+    &__block
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      border-radius: 8px
+      border: 1px solid #ECEEF2
+      padding: 40px 5px 30px 5px
+      align-items: center
+      justify-content: space-between
+      width: 265px
+      margin: auto
+      overflow: auto
+  &-block
+    &__name
+      margin-bottom: 12px
+      font-family: 'Roboto', sans-serif
+      color: $dark
       font-style: normal
       font-weight: 500
       font-size: 22px
       line-height: 32px
-      color: #183B56
-      text-align: center
-      letter-spacing: 0.2px
-      margin-top: 0
-      margin-bottom: 12px
-    &__text
+    &__subname
+      font-family: 'Open Sans', sans-serif
+      color: $text
       font-style: normal
       font-weight: normal
       font-size: 16px
       line-height: 22px
-      color: #5A7184
-      text-align: center
-      margin: 0
-  &-wrap
-    position: absolute
-    display: flex
-    z-index: 1
-  &-slider
-    position: relative
-    &__item
+    &__text
       display: flex
-      justify-content: space-betwee
-    &__button
-      width: 56px
-      height: 56px
-      border: none
-      border-radius: 50%
-      cursor: pointer
-      background-repeat: no-repeat
-      background-position: center
-      background-color: #fff
-      &--next
-        background-image: url(../img/button-next.png)
-        margin-top: -142px
-        margin-left: 1085px
-      &--prev
-        background-image: url(../img/button-prev.png)
-        margin-top: -142px
-        margin-left: -22px
+      flex-direction: column
+      align-items: center
+      justify-content: center
+  &__img
+    width: 64px
+    margin-bottom: 35px
 .swiper
-  left: 5px
+  &-container
+    overflow: hidden
+    margin-right: auto
+    margin-left: auto
   &-button
     &-disabled
       display: none
