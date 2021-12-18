@@ -1,15 +1,31 @@
 .unreleased
   background-color: $dark
-  padding-bottom: 76px
-  &-wrap
-    display: flex
-    align-items: center
-    justify-content: space-between
-  &-wrapper
-    display: flex
-    justify-content: space-between
-  &-grid
-    display: flex
+  &__container
+    padding: 34px 0 81px 2px
+    position: relative
+  &__wrapper
+    &-top
+      display: flex
+      justify-content: space-between
+    &-slide
+      display: flex
+      justify-content: space-between
+      width: 132px
+    &-button
+      width: 56px
+      height: 56px
+  &__button
+    width: 56px
+    height: 56px
+    border: 2px solid #fff
+    border-radius: 2000px
+    padding: 18px
+    background-color: transparent
+    display: block
+    margin-top: 25px
+    &:disabled
+      cursor: default
+      border: 2px solid #5A7184
   &__title
     font-family: 'Roboto Condensed', sans-serif
     font-style: normal
@@ -17,39 +33,27 @@
     font-size: 36px
     line-height: 48px
     letter-spacing: 0.2px
-    color: $light
+    color: #fff
     margin-bottom: 60px
-  &-icon
-    width: 204px
-    height: 298px
-    border-radius: 8px
-    position: relative
-    overflow: hidden
-    box-shadow: 0px 12px 16px rgba(253, 247, 247, 0.08)
-    &__books
-      width: 100%
-      height: 100%
-  &-slider
-    &__button
-      width: 56px
-      height: 56px
-      border: 2px solid #fff
-      border-radius: 2000px
-      padding: 18px
-      background-color: transparent
-      display: block
-      &:disabled
-        cursor: default
-        border: 2px solid #5A7184
-      &--next
-        margin-left: 24px
+.slide
+  &-unreleased
+    &__wrapp
+      width: 204px
+      height: 298px
+      border-radius: 8px
+      position: relative
+      overflow: hidden
+      box-shadow: 0px 12px 16px rgba(253, 247, 247, 0.08)
+      &__img
+        height: 100%
+        width: 100%
 .swiper
   &-button
-    &-disabled .svg-unedited
+    &-disabled .svg-unreleased
       cursor: default
       fill: #5A7184
 .svg
-  &-unedited
+  &-unreleased
     fill: #fff
     width: 15px
     height: 14px

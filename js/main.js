@@ -91,12 +91,12 @@ $(document).keyup(function (e) {
 });
 
 //Слайдер 2
-var reviewsSlider = new Swiper(".unreleased-slider", {
+var reviewsSlider = new Swiper(".slider-unreleased__container", {
   
   loop: false,
   navigation: {
-    nextEl: '.unreleased-slider__button--next',
-    prevEl: '.unreleased-slider__button--prev',
+    nextEl: '.unreleased__button--next',
+    prevEl: '.unreleased__button--prev',
   },
   slidesPerView: 5,
     spaceBetween: 30,
@@ -111,7 +111,7 @@ var reviewsSlider = new Swiper(".unreleased-slider", {
     
     breakpoints: {
       200: {slidesPerView: 1},
-      480: {slidesPerView: 2, spaceBetween: 25},
+      520: {slidesPerView: 2, spaceBetween: 20},
       767: {slidesPerView: 3},
       993: {slidesPerView: 4},
       1200: {slidesPerView: 5}
