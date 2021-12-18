@@ -1,36 +1,40 @@
 .navbar
+  padding-top: 36px
+  padding-bottom: 36px
+  background-color: $light
   &-top
     display: flex
     align-items: center
     justify-content: space-between
-    padding-top: 26px
-    padding-bottom: 26px
+  &-right
+    display: flex
+    align-items: center
+  &-menu
+    list-style-type: none
+    display: flex
+    padding-left: 0
+    &__link
+      text-decoration: none
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: $dark
+      cursor: pointer
+    &__item
+      margin-right: 23px
+  &__button
+    background-color: inherit
+    color: $blue
+    border: 2px solid $blue
+    border-radius: 8px
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 22px
+    padding: 11px 32px 11px 32px
+    cursor: pointer
+    margin-left: 38px
+    outline: none
 .logo
   width: 90px
-.nav
-  &-link
-    color: #183B56
-    font-style: normal
-    font-weight: 600
-    font-size: 16px
-    line-height: 22px
-    text-decoration: none
-    &-1
-      margin-right: 17px
-    &-2
-      margin-right: 20px
-    &-3
-      margin-right: 25px
-  &__button
-    font-style: normal
-    font-weight: bold
-    font-size: 16px
-    line-height: 22px
-    color: #1565D8
-    cursor: pointer
-    outline: none
-    border-radius: 8px
-    padding: 11px 30px 11px 27px
-    border: 2px solid #1565D8
-    background-color: #fff
-    margin-left: 38px

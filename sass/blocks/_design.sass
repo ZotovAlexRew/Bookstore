@@ -3,90 +3,80 @@
   padding-bottom: 100px
   &-grid
     display: flex
-    justify-content: space-between
-    align-items: center
   &-info
-    margin-right: 67px
-  &-title
-    font-family: Roboto Condensed
+    padding: 46px 67px 0 0
+    display: flex
+    flex-direction: column
+  &-wrapper
+    padding: 93px 119px
+    background-color: rgba(179,186,197, 0.1)
+    text-align: center
+    align-self: center
+  &__title
+    font-family: 'Roboto Condensed', sans-serif
     font-style: normal
     font-weight: bold
     font-size: 48px
     line-height: 60px
     color: #FAAD13
-    margin-top: -5px
-    margin-left: 5px
-    &__additionally
-      font-family: Roboto Condensed
+    margin-bottom: 0
+    margin-top: -13px
+    &-additionally
+      font-family: 'Roboto Condensed', sans-serif
       font-style: normal
       font-weight: bold
       font-size: 48px
       line-height: 60px
-      color: #183B56
-    &__author
-      color: #183B56
-      font-family: Roboto
+      color: $dark
+      margin-top: 0
+      margin-bottom: 28px
+    &-author
+      color: $dark
+      font-family: 'Roboto', sans-serif
       font-style: normal
       font-weight: 500
       font-size: 20px
       line-height: 24px
       margin-top: 0
       margin-bottom: 36px
-      margin-left: 5px
-  &-text
+  &__text
     font-style: normal
     font-weight: normal
     font-size: 18px
     line-height: 32px
-    color: #5A7184
-    margin-left: 5px
+    color: $text
     max-width: 585px
     margin-top: 0
-    margin-bottom: 0
-  &-wrapper
-    position: relative
-    &__image
-      position: absolute
-      width: 250px
-      height: 374px
-      display: block
-      margin: 103px 119px
-      background: rgba(0, 0, 0, 0.0001)
-      box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.08)
-    &__block
-      width: 488px
-      height: 580px
-      background-color: #B3BAC5
-      opacity: 0.1
-.sold
-  margin-top: 56px
-  &-button
-    &__1
-      font-style: normal
-      font-weight: bold
-      font-size: 16px
-      line-height: 22px
-      text-align: center
-      text-transform: uppercase
-      color: #fff
-      cursor: pointer
-      outline: none
-      border-radius: 8px
-      padding: 18px 38px 18px 38px
-      border: none
-      background-color: #1565D8
-    &__2
-      font-style: normal
-      font-weight: bold
-      font-size: 18px
-      line-height: 25px
-      text-align: center
-      text-transform: uppercase
-      color: #1565D8
-      cursor: pointer
-      outline: none
-      border-radius: 8px
-      padding: 15px 48px 15px 48px
-      border: 2px solid #1565D8
-      background-color: #fff
-      margin-left: 26px
+    margin-bottom: 56px
+    max-height: 200px
+    overflow: auto
+.button
+  &__buy
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    text-transform: uppercase
+    color: $light
+    cursor: pointer
+    outline: none
+    border-radius: 8px
+    padding: 19px 36px
+    border: none
+    background-color: $blue
+  &__read
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    text-transform: uppercase
+    color: $blue
+    cursor: pointer
+    outline: none
+    border-radius: 8px
+    padding: 16px 48px
+    border: 2px solid $blue
+    background-color: $light
+    margin-left: 21px

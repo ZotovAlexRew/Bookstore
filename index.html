@@ -14,22 +14,31 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="img/hor-logo.svg"
               alt="logo:Bookstore"
               class="logo__image"
             />
           </a>
-          <nav class="nav">
-            <a href="#" class="nav-link nav-link-1">Рекомендации</a>
-            <a href="#" class="nav-link nav-link-2">Книги</a>
-            <a href="#" class="nav-link nav-link-3">Блог</a>
-            <button class="nav__button">Получить</button>
-          </nav>
+          <div class="navbar-right">
+            <ul class="navbar-menu">
+              <li class="navbar-menu__item">
+                <a href="#" class="navbar-menu__link">Рекомендации</a>
+              </li>
+              <li class="navbar-menu__item">
+                <a href="#" class="navbar-menu__link">Книги</a>
+              </li>
+              <li class="navbar-menu__item">
+                <a href="#" class="navbar-menu__link">Блог</a>
+              </li>
+            </ul>
+            <button data-toggle="modal" class="navbar__button">Получить</button>
+          </div>
+          <!-- /.navbar-right -->
         </div>
       </div>
       <!-- /.container -->
@@ -40,18 +49,22 @@
       <div class="container">
         <div class="design-grid">
           <div class="design-info">
-            <h2 class="design-title">Design Theory: <span class="design-title__additionally">The Psychology of Graphic Design Pricing</span></h2>
+            <h1 class="design__title">Design Theory:</h1>
+            <h2 class="design__title-additionally">
+              The Psychology of <br />Graphic Design Pricing
+            </h2>
 
-            <h3 class="design-title__author">КНИГА МИШЕЛЯ ЯНГА</h3>
+            <h3 class="design__title-author">КНИГА МИШЕЛЯ ЯНГА</h3>
 
-            <p class="design-text">Спустя 15 лет я управляю собственной студией, выполнив тысячи
-            проектов для крупных клиентов. Теперь я делюсь своими золотыми
-            стратегиями ценообразования на творческую работу.</p
-            >
-            <div class="sold">
-              <button class="sold-button sold-button__1">Купить сейчас</button>
+            <p class="design__text">
+              Спустя 15 лет я управляю собственной студией, выполнив тысячи
+              проектов для крупных клиентов. Теперь я делюсь своими золотыми
+              стратегиями ценообразования на творческую работу.
+            </p>
+            <div class="button">
+              <button class="button__buy">Купить сейчас</button>
 
-              <button class="sold-button sold-button__2">Читать демо</button>
+              <button class="button__read">Читать демо</button>
             </div>
             <!-- /.buttons -->
           </div>
@@ -62,8 +75,6 @@
               src="img/book.png"
               alt="КНИГА МИШЕЛЯ ЯНГА"
             />
-            <div class="design-wrapper__block"></div>
-              <!-- /.image-block -->
           </div>
         </div>
       </div>
@@ -75,232 +86,207 @@
       <div class="container">
         <div class="books-info">
           <div class="books-left">
-            <h2 class="books-title books-title__left">Рекомендации</h2>
-            <div class="books-wrapper">
-              <div class="books-card books-card--1">
-                <div class="books-card__left">
-                  <img src="img/book1.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--1">
-                    The World of Abstract Art
-                  </h3>
-                  <p class="books-card__text">Art & Design</p>
-                  <p class="books-card__price">$25.00</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+            <h2 class="books-title">Рекомендации</h2>
+            <div class="books-grid">
+              <div class="books-wrapper">
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book1.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title">The World of Abstract Art</span>
+                    <span class="card__subtitle">Art & Design</span>
+                    <span class="card__price">$25.00</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
-              </div>
-              <!-- /.books-card -->
+                <!-- /.card -->
 
-              <div class="books-card books-card--2">
-                <div class="books-card__left">
-                  <img src="img/book2.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--2">
-                    Educated : a Memoir
-                  </h3>
-                  <p class="books-card__text">Education</p>
-                  <p class="books-card__price">$28.00</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book2.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title"
+                      >Educated : <br />
+                      a Memoir</span
+                    >
+                    <span class="card__subtitle">Education</span>
+                    <span class="card__price">$28.00</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
-              </div>
-              <!-- /.books-card -->
+                <!-- /.card -->
 
-              <div class="books-card books-card--3">
-                <div class="books-card__left">
-                  <img src="img/book3.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--3">
-                    The Blue Flowers Ray…
-                  </h3>
-                  <p class="books-card__text">Novel</p>
-                  <p class="books-card__price">$19.50</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book3.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title">The Blue Flowers Ray…</span>
+                    <span class="card__subtitle">Novel</span>
+                    <span class="card__price">$19.50</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
-              </div>
-              <!-- /.books-card -->
+                <!-- /.card -->
 
-              <div class="books-card books-card--4">
-                <div class="books-card__left">
-                  <img src="img/book4.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--4">
-                    There There : a Novel by TO
-                  </h3>
-                  <p class="books-card__text">Novel</p>
-                  <p class="books-card__price">$20.00</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book4.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title"
+                      >There There : <br />
+                      a Novel by TO</span
+                    >
+                    <span class="card__subtitle">Novel</span>
+                    <span class="card__price">$20.00</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
-              </div>
-              <!-- /.books-card -->
+                <!-- /.card -->
 
-              <div class="books-card books-card--5">
-                <div class="books-card__left">
-                  <img src="img/book5.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--5">
-                    WMNDFL :</br>The Inspiration
-                  </h3>
-                  <p class="books-card__text">Business</p>
-                  <p class="books-card__price">$23.00</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book5.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title"
+                      >WMNDFL : <br />
+                      The Inspiration</span
+                    >
+                    <span class="card__subtitle">Business</span>
+                    <span class="card__price">$23.00</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
-              </div>
-              <!-- /.books-card -->
+                <!-- /.card -->
 
-              <div class="books-card books-card--6">
-                <div class="books-card__left">
-                  <img src="img/book6.png" alt="" class="books-card__image" />
-                </div>
-                <!-- /.books-card__left -->
-                <div class="books-card__right">
-                  <h3 class="books-card__title books-card__title--6">
-                    Making</br>Things Happen
-                  </h3>
-                  <p class="books-card__text">Motivation</p>
-                  <p class="books-card__price">$23.00</p>
-                  <div class="books-card__sold">
-                    <button class="books-card__button">Купить</button>
-                    <img
-                      src="img/heart.png"
-                      alt="Понравилось - сердечко"
-                      class="books-card__heart"
-                    />
+                <div class="card">
+                  <div class="card-left">
+                    <div class="card__image">
+                      <img src="img/book6.png" alt="Book" class="card__img" />
+                    </div>
+                  </div>
+                  <div class="card-right">
+                    <span class="card__title"
+                      >Making <br />
+                      Things Happen</span
+                    >
+                    <span class="card__subtitle">Motivation</span>
+                    <span class="card__price">$23.00</span>
+                    <div class="card__bought">
+                      <button class="card__button">Купить</button>
+                      <img src="img/heart.svg" alt="Like" class="card__like" />
+                    </div>
+                    <!-- /.card__bought -->
                   </div>
                 </div>
-                <!-- /.books-card__right -->
+                <!-- /.card -->
               </div>
-              <!-- /.books-card -->
+              <!-- /.books-wrapper -->
+              <button class="books-more">
+                <span class="books-rec">БОЛЬШЕ РЕКОМЕНДАЦИЙ</span>
+              </button>
             </div>
-            <!-- /.books-wrapper -->
-              <button class="books-more"><span class="books-rec">БОЛЬШЕ РЕКОМЕНДАЦИЙ</span></button>
           </div>
           <!-- /.books-left -->
 
-          <div class="books-right">
-            <h2 class="books-title books-title__right">Топ Месяца</h2>
-            <div class="books-wrap">
-              <div class="books-cards books-cards__right books-cards__right--7">
-                <div class="books-cards__left">
-                  <img src="img/book7.png" alt="" class="books-cards__img" />
+          <div class="best">
+            <h2 class="best__title">Топ Месяца</h2>
+            <div class="best-block">
+              <div class="best-card">
+                <div class="best__left">
+                  <img src="img/book7.png" alt="book" class="best__img" />
                 </div>
-                <!-- /.books-card__left -->
-                <div class="books-cards__right">
-                  <h3 class="books-cards__title books-cards__title--7">
-                    Sprint : Solve, Test in 5 Days
-                  </h3>
-                  <p class="books-cards__price">$23.00</p>
-                  <button class="books-cards__button">Купить</button>
+                <!-- /.best__left -->
+                <div class="best__right">
+                  <span class="best__name">Sprint : Solve, Test in 5 Days</span
+                  ><span class="best__price">$23.00</span
+                  ><button class="best__button">Купить</button>
                 </div>
-                <!-- /.books-card__right -->
+                <!-- /.best__right -->
               </div>
-              <!-- /.books-card -->
+              <!-- /.best-card -->
 
-              <div class="books-cards books-cards__right books-cards__right--8">
-                <div class="books-cards__left">
-                  <img src="img/book8.png" alt="" class="books-cards__img" />
+              <div class="best-card">
+                <div class="best__left">
+                  <img src="img/book8.png" alt="book" class="best__img" />
                 </div>
-                <!-- /.books-card__left -->
-                <div class="books-cards__right">
-                  <h3 class="books-cards__title books-cards__title--8">
-                    Hacking Growth Break Problem
-                  </h3>
-                  <p class="books-cards__price">$23.00</p>
-                  <button class="books-cards__button">Купить</button>
+                <!-- /.best__left -->
+                <div class="best__right">
+                  <span class="best__name">Hacking Growth Break Problem</span>
+                  <span class="best__price">$23.00</span>
+                  <button class="best__button">Купить</button>
                 </div>
-                <!-- /.books-card__right -->
+                <!-- /.best__right -->
               </div>
-              <!-- /.books-card -->
+              <!-- /.best-card -->
 
-              <div class="books-cards books-cards__right books-cards__right--9">
-                <div class="books-cards__left">
-                  <img src="img/book9.png" alt="" class="books-cards__img" />
+              <div class="best-card">
+                <div class="best__left">
+                  <img src="img/book9.png" alt="book" class="best__img" />
                 </div>
-                <!-- /.books-card__left -->
-                <div class="books-cards__right">
-                  <h3 class="books-cards__title books-cards__title--9">
-                    Very Nice a Novel by Mercy
-                  </h3>
-                  <p class="books-cards__price">$23.00</p>
-                  <button class="books-cards__button">Купить</button>
+                <!-- /.best__left -->
+                <div class="best__right">
+                  <span class="best__name">Very Nice a Novel by Mercy</span>
+                  <span class="best__price">$23.00</span
+                  ><button class="best__button">Купить</button>
                 </div>
-                <!-- /.books-card__right -->
+                <!-- /.best__right -->
               </div>
-              <!-- /.books-card -->
+              <!-- /.best-card -->
 
-              <div class="books-cards books-cards__right books-cards__right--10">
-                <div class="books-cards__left">
-                  <img src="img/book10.png" alt="" class="books-cards__img" />
+              <div class="best-card">
+                <div class="best__left">
+                  <img src="img/book10.png" alt="book" class="best__img" />
                 </div>
-                <!-- /.books-card__left -->
-                <div class="books-cards__right">
-                  <h3 class="books-cards__title books-cards__title--10">
-                    Hooked : How to Build Products
-                  </h3>
-                  <p class="books-cards__price">$23.00</p>
-                  <button class="books-cards__button">Купить</button>
+                <!-- /.best__left -->
+                <div class="best__right">
+                  <span class="best__name">Hooked : How to Build Products</span>
+                  <span class="best__price">$23.00</span
+                  ><button class="best__button">Купить</button>
                 </div>
-                <!-- /.books-card__right -->
+                <!-- /.best__right -->
               </div>
-              <!-- /.books-card -->
-              <div class="books-down">
-                <hr class="books-line" />
-                <p class="books-best">Лучшие книги</p>
-              </div>
-              
+              <!-- /.best-card -->
+              <span class="best__line"></span>
+              <span class="best__book">Лучшие книги</span>
             </div>
-            <!-- /.books-wrap -->
+            <!-- /.best-block -->
           </div>
-          <!-- /.books-right -->
+          <!-- /.best -->
         </div>
         <!-- /.books-info -->
       </div>
@@ -312,85 +298,103 @@
       <div class="container">
         <hr class="category-line" />
         <div class="swiper category-slider category__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
                   <img
-                  class="category-card__image"
-                  src="img/icon1.png"
-                  alt="Pool"
+                    class="category-card__image"
+                    src="img/icon1.png"
+                    alt="Pool"
                   />
-                   <h3 class="category-card__title">Бизнес & Финансы</h3>
-                  <p class="category-card__text">Книги про мир бизнеса</p>
                 </div>
+                <h3 class="category-card__title">Бизнес & Финансы</h3>
+                <p class="category-card__text">Книги про мир бизнеса</p>
               </div>
+            </div>
 
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
                   <img
-                  class="category-card__image"
-                  src="img/icon2.png"
-                  alt="Pool"
+                    class="category-card__image"
+                    src="img/icon2.png"
+                    alt="Pool"
                   />
-                   <h3 class="category-card__title category-card__title--2">Самомотиватия</h3>
-                  <p class="category-card__text">Книги о мотивации</p>
                 </div>
+                <h3 class="category-card__title category-card__title--2">
+                  Самомотиватия
+                </h3>
+                <p class="category-card__text">Книги о мотивации</p>
               </div>
+            </div>
 
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
                   <img
-                  class="category-card__image"
-                  src="img/icon3.png"
-                  alt="Pool"
+                    class="category-card__image"
+                    src="img/icon3.png"
+                    alt="Pool"
                   />
-                   <h3 class="category-card__title">Романы Теленовеллы</h3>
-                  <p class="category-card__text">Книги с крутыми историями</p>
                 </div>
+                <h3 class="category-card__title">Романы Теленовеллы</h3>
+                <p class="category-card__text">Книги с крутыми историями</p>
               </div>
+            </div>
 
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
                   <img
-                  class="category-card__image"
-                  src="img/icon4.png"
-                  alt="Pool"
+                    class="category-card__image"
+                    src="img/icon4.png"
+                    alt="Pool"
                   />
-                   <h3 class="category-card__title">Навыки будущего</h3>
-                  <p class="category-card__text">Книги для самоподготовки</p>
                 </div>
+                <h3 class="category-card__title">Навыки будущего</h3>
+                <p class="category-card__text">Книги для самоподготовки</p>
               </div>
-              
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
-                  <img
-                  class="category-card__image"
-                  src="img/icon2.png"
-                  alt="Pool"
-                  />
-                   <h3 class="category-card__title">Истории знаменитостей</h3>
-                  <p class="category-card__text">Книги автобиографии</p>
-                </div>
-              </div>
+            </div>
 
-              <div class="swiper-slide category-slider__item">
-                <div class="category-card">
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
                   <img
-                  class="category-card__image"
-                  src="img/icon3.png"
-                  alt="Pool"
+                    class="category-card__image"
+                    src="img/icon2.png"
+                    alt="Pool"
                   />
-                   <h3 class="category-card__title">Мир фантазиий</h3>
-                  <p class="category-card__text">Фантастика и мистика</p>
                 </div>
+                <h3 class="category-card__title">Истории знаменитостей</h3>
+                <p class="category-card__text">Книги автобиографии</p>
               </div>
-            </div> 
+            </div>
+
+            <div class="swiper-slide category-slider__item">
+              <div class="category-card">
+                <div class="category-card__icon">
+                  <img
+                    class="category-card__image"
+                    src="img/icon3.png"
+                    alt="Pool"
+                  />
+                </div>
+                <h3 class="category-card__title">Мир фантазиий</h3>
+                <p class="category-card__text">Фантастика и мистика</p>
+              </div>
+            </div>
+          </div>
         </div>
-          <!-- Swiper -->
+        <!-- Swiper -->
         <div class="category-wrap">
           <!-- If we need navigation buttons -->
-          <button class="category-slider__button category-slider__button--prev"></button>
-            <button class="category-slider__button category-slider__button--next"></button>
+          <button
+            class="category-slider__button category-slider__button--prev"
+          ></button>
+          <button
+            class="category-slider__button category-slider__button--next"
+          ></button>
         </div>
       </div>
       <!-- /.container -->
@@ -401,120 +405,198 @@
       <div class="container">
         <div class="unreleased-wrap">
           <h2 class="unreleased__title">Неизданные книги</h2>
+
           <div class="unreleased-grid">
             <!-- If we need navigation buttons -->
-          <button class="unreleased-slider__button unreleased-slider__button--prev">
-            <svg width="54" height="56" viewBox="0 0 54 56" fill="none"       xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="52" height="54" rx="26" stroke="white" stroke-width="2"/>
-              <path d="M27.317 34.9375C27.6295 34.625 27.5982 34.1562 27.317 33.8438L23.5357 30.25H32.5357C32.942 30.25 33.2857 29.9375 33.2857 29.5V28.5C33.2857 28.0938 32.942 27.75 32.5357 27.75H23.5357L27.317 24.1875C27.5982 23.875 27.6295 23.4062 27.317 23.0938L26.6295 22.4062C26.3482 22.125 25.8482 22.125 25.567 22.4062L19.5045 28.5C19.192 28.7812 19.192 29.25 19.5045 29.5312L25.567 35.625C25.8482 35.9062 26.317 35.9062 26.6295 35.625L27.317 34.9375Z" fill="white"/>
-            </svg>
-          </button>
-          <button class="unreleased-slider__button unreleased-slider__button--next">
-            <svg width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="52" height="54" rx="26" stroke="white" stroke-width="2"/>
-              <path d="M25.2232 23.0938C24.9107 23.4062 24.942 23.875 25.2232 24.1875L29.0045 27.75H20.0357C19.5982 27.75 19.2857 28.0938 19.2857 28.5V29.5C19.2857 29.9375 19.5982 30.25 20.0357 30.25H29.0045L25.2232 33.8438C24.942 34.1562 24.942 34.625 25.2232 34.9375L25.9107 35.625C26.2232 35.9062 26.692 35.9062 26.9732 35.625L33.067 29.5312C33.3482 29.25 33.3482 28.7812 33.067 28.4688L26.9732 22.4062C26.692 22.125 26.2232 22.125 25.9107 22.4062L25.2232 23.0938Z" fill="white"/>
-            </svg>
-          </button>
+            <button
+              class="unreleased-slider__button unreleased-slider__button--prev"
+            >
+              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.317 12.938c.312-.313.281-.782 0-1.094L4.536 8.25h9a.74.74 0 0 0 .75-.75v-1a.76.76 0 0 0-.75-.75h-9l3.781-3.563c.281-.312.312-.78 0-1.093L7.629.406a.774.774 0 0 0-1.062 0L.504 6.5a.684.684 0 0 0 0 1.031l6.063 6.094c.281.281.75.281 1.062 0l.688-.688z"
+                />
+              </svg>
+            </button>
+
+            <button
+              class="unreleased-slider__button unreleased-slider__button--next"
+            >
+              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.223 1.094c-.312.312-.281.781 0 1.093l3.782 3.563h-8.97a.74.74 0 0 0-.75.75v1c0 .438.313.75.75.75h8.97l-3.782 3.594a.814.814 0 0 0 0 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.973.406c-.281-.281-.75-.281-1.062 0l-.688.688z"
+                />
+              </svg>
+            </button>
           </div>
+          <!-- /.unreleased-grid -->
         </div>
-          <div class="swiper unreleased-slider unreleased__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide unreleased-slider__item">
-                <img src="img/unreleased1.png" alt="unreleased book" class="unreleased__books">
-              </div>
 
-              <div class="swiper-slide unreleased-slider__item">
-                <img src="img/unreleased2.png" alt="unreleased book" class="unreleased__books">
-              </div>
-
-              <div class="swiper-slide unreleased-slider__item">
-                 <img src="img/unreleased3.png" alt="unreleased book" class="unreleased__books">
-              </div>
-
-              <div class="swiper-slide unreleased-slider__item">
-                <img src="img/unreleased4.png" alt="unreleased book" class="unreleased__books">
-              </div>
-              
-              <div class="swiper-slide unreleased-slider__item">
-                <img src="img/unreleased5.png" alt="unreleased book" class="unreleased__books">
-              </div>
-
-              <div class="swiper-slide unreleased-slider__item">
-                <img src="img/unreleased1.png" alt="unreleased book" class="unreleased__books">
+        <div class="swiper unreleased-slider unreleased__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-1.png"
+                  alt="unreleased book"
+                  class="unreleased__books"
+                />
               </div>
             </div>
 
-            
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-2.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-3.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-4.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-5.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-2.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-5.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-slide unreleased-slider__item">
+              <div class="unreleased-icon">
+                <img
+                  src="img/Bitmap-4.png"
+                  alt="unreleased book"
+                  class="unreleased-icon__books"
+                />
+              </div>
+            </div>
           </div>
-          <!-- Swiper -->
         </div>
+        <!-- Swiper -->
+      </div>
     </section>
     <!-- /.unreleased -->
 
     <section class="history">
       <div class="container">
-          <div class="history-info">
-            <h2 class="history__title">История Автора</h2>
-            <div class="history-info__right">
-              <p class="history__text">Это раздел авторского рассказа. Каждую неделю мы стараемся рассказать вам историю писателя. Расскажем всем 
-              о закулисье их книг.
-              </p>
-            </div>
+        <div class="history-info">
+          <h2 class="history__title">История Автора</h2>
+          <div class="history-info__right">
+            <p class="history__text">
+              Это раздел авторского рассказа. Каждую неделю мы стараемся
+              рассказать вам историю писателя. Расскажем всем о закулисье их
+              книг.
+            </p>
           </div>
-          <!-- /.history-info -->
-          <img src="img/author1.jpg" alt="" class="history__image">
-          <img src="img/play.svg" alt="play" class="history__play">
-          <div class="history-wrapper">
-            <div class="history__author">
-              <img src="img/author2.jpg" alt="" class=" history__image--small">
-              <img src="img/mini-play.svg" alt="play" class="history__miniplay">
-              <div class="history__info">
-                <div class="history__info__left">
-                  <h3 class="history__info--title">Emelda Scandroot</h3>
-                  <p class="history__info--text">Author of Books Tittle</p>
-                </div>
-
-                <div class="history__info__right">
-                  <img src="img/save-icon.svg" alt="" class="history__info--save">
-                </div>
+        </div>
+        <!-- /.history-info -->
+        <img src="img/author1.jpg" alt="" class="history__image" />
+        <img src="img/play.svg" alt="play" class="history__play" />
+        <div class="history-wrapper">
+          <div class="history__author">
+            <img src="img/author2.jpg" alt="" class="history__image--small" />
+            <img src="img/mini-play.svg" alt="play" class="history__miniplay" />
+            <div class="history__info">
+              <div class="history__info__left">
+                <h3 class="history__info--title">Emelda Scandroot</h3>
+                <p class="history__info--text">Author of Books Tittle</p>
               </div>
-              <!-- /.history__info -->
-            </div>
-            <!-- /.history__author -->
-            <div class="history__author">
-              <img src="img/author3.jpg" alt="" class="history__image--small">
-              <img src="img/mini-play.svg" alt="play" class="history__miniplay">
-              <div class="history__info">
-                <div class="history__info__left">
-                  <h3 class="history__info--title">Mar Rueda</h3>
-                  <p class="history__info--text">Author of Books Tittle</p>
-                </div>
 
-                <div class="history__info__right">
-                  <img src="img/save-icon.svg" alt="" class="history__info--save">
-                </div>
+              <div class="history__info__right">
+                <img
+                  src="img/save-icon.svg"
+                  alt=""
+                  class="history__info--save"
+                />
               </div>
-              <!-- /.history__info -->
             </div>
-            <!-- /.history__author -->
-            <div class="history__author history__author--1">
-              <img src="img/author4.jpg" alt="" class="history__image--small">
-              <img src="img/mini-play.svg" alt="play" class="history__miniplay">
-              <div class="history__info">
-                <div class="history__info__left">
-                  <h3 class="history__info--title">Nembo Lukeni</h3>
-                  <p class="history__info--text">Author of Books Tittle</p>
-                </div>
-
-                <div class="history__info__right">
-                  <img src="img/save-icon.svg" alt="" class="history__info--save">
-                </div>
-              </div>
-              <!-- /.history__info -->
-            </div>
-            <!-- /.history__author -->
+            <!-- /.history__info -->
           </div>
-          <!-- /.history-wrapper -->
+          <!-- /.history__author -->
+          <div class="history__author">
+            <img src="img/author3.jpg" alt="" class="history__image--small" />
+            <img src="img/mini-play.svg" alt="play" class="history__miniplay" />
+            <div class="history__info">
+              <div class="history__info__left">
+                <h3 class="history__info--title">Mar Rueda</h3>
+                <p class="history__info--text">Author of Books Tittle</p>
+              </div>
+
+              <div class="history__info__right">
+                <img
+                  src="img/save-icon.svg"
+                  alt=""
+                  class="history__info--save"
+                />
+              </div>
+            </div>
+            <!-- /.history__info -->
+          </div>
+          <!-- /.history__author -->
+          <div class="history__author history__author--1">
+            <img src="img/author4.jpg" alt="" class="history__image--small" />
+            <img src="img/mini-play.svg" alt="play" class="history__miniplay" />
+            <div class="history__info">
+              <div class="history__info__left">
+                <h3 class="history__info--title">Nembo Lukeni</h3>
+                <p class="history__info--text">Author of Books Tittle</p>
+              </div>
+
+              <div class="history__info__right">
+                <img
+                  src="img/save-icon.svg"
+                  alt=""
+                  class="history__info--save"
+                />
+              </div>
+            </div>
+            <!-- /.history__info -->
+          </div>
+          <!-- /.history__author -->
+        </div>
+        <!-- /.history-wrapper -->
       </div>
       <!-- /.container -->
     </section>
@@ -522,47 +604,96 @@
 
     <section class="publishers">
       <div class="container">
-        <h2 class="publishers__title">Некоторые из издателей, с которыми мы сотрудничали
+        <h2 class="publishers__title">
+          Некоторые из издателей, с которыми мы сотрудничали
         </h2>
         <div class="publishers-up">
           <div class="publishers__partners publishers__partners--1">
-            <img src="img/partners/partners1.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/partners1.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners publishers__partners--2">
-            <img src="img/partners/netflix.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/netflix.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners publishers__partners--3">
-            <img src="img/partners/fitbit.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/fitbit.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners publishers__partners--4">
-            <img src="img/partners/google.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/google.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners publishers__partners--5">
-            <img src="img/partners/airbnb.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/airbnb.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners publishers__partners--6">
-            <img src="img/partners/uber.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/uber.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
         </div>
         <div class="publishers-down">
           <div class="publishers__partners">
-            <img src="img/partners/netflix.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/netflix.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners">
-            <img src="img/partners/airbnb.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/airbnb.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners">
-            <img src="img/partners/partners1.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/partners1.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners">
-            <img src="img/partners/uber.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/uber.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners">
-            <img src="img/partners/fitbit.png" alt="partners" class="publishers__image">
+            <img
+              src="img/partners/fitbit.png"
+              alt="partners"
+              class="publishers__image"
+            />
           </div>
           <div class="publishers__partners">
-            <img src="img/partners/google.png" alt="partners" class="publishers__image">
-          </div>  
+            <img
+              src="img/partners/google.png"
+              alt="partners"
+              class="publishers__image"
+            />
+          </div>
         </div>
         <!-- /.publishers-wrapper -->
       </div>
@@ -576,12 +707,18 @@
           <h2 class="blog__title">Ehya Блог</h2>
           <button class="blog__button">Все Блоги</button>
         </div>
-        
+
         <div class="blog-wrapper">
           <div class="blog-left">
-            <img src="img/blog/Shape.jpg" alt="" class="blog-left__image">
-            <h3 class="blog-left__title">Success Steps For Your Business Life</h3>
-            <p class="blog-left__text">This is the author story section. Every week we try to give you the story of book writer. Tell all of you the behind the scene of their books.</p>
+            <img src="img/blog/Shape.jpg" alt="" class="blog-left__image" />
+            <h3 class="blog-left__title">
+              Success Steps For Your Business Life
+            </h3>
+            <p class="blog-left__text">
+              This is the author story section. Every week we try to give you
+              the story of book writer. Tell all of you the behind the scene of
+              their books.
+            </p>
           </div>
 
           <div class="blog-right">
@@ -592,12 +729,14 @@
               <!-- /.blog-card__left -->
               <div class="blog-card__right">
                 <p class="blog-card__text">23 МАРТА 2020</p>
-                <h3 class="blog-card__title blog-card__title--1">29 Motivational Quotes for Work Environments</h3>
+                <h3 class="blog-card__title blog-card__title--1">
+                  29 Motivational Quotes for Work Environments
+                </h3>
                 <p class="blog-card__read">ЧИТАТЬ</p>
               </div>
               <!-- /.blog-card__right -->
             </div>
-           <!-- /.blog-card -->
+            <!-- /.blog-card -->
 
             <div class="blog-card blog-card--2">
               <div class="blog-card__left">
@@ -606,7 +745,9 @@
               <!-- /.blog-card__left -->
               <div class="blog-card__right">
                 <p class="blog-card__text">28 МАРТА 2020</p>
-                <h3 class="blog-card__title blog-card__title--2">Learn To Love Growth and You Will Be A Success</h3>
+                <h3 class="blog-card__title blog-card__title--2">
+                  Learn To Love Growth and You Will Be A Success
+                </h3>
                 <p class="blog-card__read">ЧИТАТЬ</p>
               </div>
               <!-- /.blog-card__right -->
@@ -615,12 +756,18 @@
 
             <div class="blog-card blog-card--3">
               <div class="blog-card__left">
-                <img src="img/blog/window.png" alt="" class="blog-card__image" />
+                <img
+                  src="img/blog/window.png"
+                  alt=""
+                  class="blog-card__image"
+                />
               </div>
               <!-- /.blog-card__left -->
               <div class="blog-card__right">
                 <p class="blog-card__text">28 МАРТА 2020</p>
-                <h3 class="blog-card__title">Motivation How To Build Trust at your Work</h3>
+                <h3 class="blog-card__title">
+                  Motivation How To Build Trust at your Work
+                </h3>
                 <p class="blog-card__read">ЧИТАТЬ</p>
               </div>
               <!-- /.blog-card__right -->
@@ -640,17 +787,16 @@
           <h2 class="stock__title">Будь первым, кто узнает о наших акциях</h2>
 
           <form action="#" class="search stock__search">
-            <img class="stock__img" src="img/icon-email.svg" alt="icon: email" />
-            <input
-              type="text"
-              class="stock__input"
-              placeholder="Ваш Emaill"
+            <img
+              class="stock__img"
+              src="img/icon-email.svg"
+              alt="icon: email"
             />
-            
-            <button class="stock__button">Регистрация</button>
-        </form>
-        </div>
+            <input type="text" class="stock__input" placeholder="Ваш Emaill" />
 
+            <button class="stock__button">Регистрация</button>
+          </form>
+        </div>
       </div>
     </section>
     <!-- /.stock -->
@@ -660,13 +806,35 @@
         <div class="footer-top">
           <div class="footer__main">
             <a href="#" class="footer__main--link">
-              <img src="img/footer/footer-logo.png" alt="Logo" class="footer__main--image">
+              <img
+                src="img/footer/footer-logo.png"
+                alt="Logo"
+                class="footer__main--image"
+              />
             </a>
-            <p class="footer__main--text">Создайте современный и креативный веб-сайт с crealand</p>
-            <img src="img/footer/Icon1.png" alt="social link" class="footer__main--social">
-            <img src="img/footer/Icon2.png" alt="social link" class="footer__main--social">
-            <img src="img/footer/Icon3.png" alt="social link" class="footer__main--social">
-            <img src="img/footer/Icon4.png" alt="social link" class="footer__main--social">
+            <p class="footer__main--text">
+              Создайте современный и креативный веб-сайт с crealand
+            </p>
+            <img
+              src="img/footer/Icon1.png"
+              alt="social link"
+              class="footer__main--social"
+            />
+            <img
+              src="img/footer/Icon2.png"
+              alt="social link"
+              class="footer__main--social"
+            />
+            <img
+              src="img/footer/Icon3.png"
+              alt="social link"
+              class="footer__main--social"
+            />
+            <img
+              src="img/footer/Icon4.png"
+              alt="social link"
+              class="footer__main--social"
+            />
           </div>
 
           <div class="footer__list">
@@ -747,14 +915,65 @@
         <!-- /.footer-top -->
 
         <div class="footer-down">
-            <img src="img/footer/wheart.png" alt="heart" 
-            class="footer-down__image">
-            <p class="footer-down__text">Copyright © 2019. Crafted with love.</p>
-          </div>
+          <img
+            src="img/footer/wheart.png"
+            alt="heart"
+            class="footer-down__image"
+          />
+          <p class="footer-down__text">Copyright © 2019. Crafted with love.</p>
+        </div>
       </div>
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="icon: close" />
+        </a>
+        <h3 class="modal__title">Contact us</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input phone"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+            minlength="17"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="modal__message"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <div class="modal__bottom">
+            <button class="modal__button">Send</button>
+          </div>
+        </form>
+
+        <!-- /.madal__container -->
+      </div>
+      <!-- /.madal__dialog -->
+    </div>
+    <!-- /.modal -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

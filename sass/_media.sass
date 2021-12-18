@@ -1,78 +1,40 @@
-@media ( max-width: 1200px )
+@media ( max-width: 1199px )
   .container
-    max-width: 990px
+    max-width: 960px
   .design
+    padding-top: 35px
     &-wrapper
-      &__block
-        width: 448px
-      &__image
-        margin: 103px 103px
-  .sold
-    &-button
-      &__1
-        padding: 18px 30px 18px 30px
-      &__2
-        padding: 15px 40px 15px 40px
+      padding: 145px 119px
+  .button
+    &__buy
+      padding: 19px 29px
+    &__read
+      padding: 16px 22px
   .books
-    &-wrapper
-      grid-gap: 22px
-    &-card
-      width: 330px
-      height: 220px
-      &__title
-        font-size: 20px
-        line-height: 24px
-        &--4
-          width: 133px
-      &__text
-        font-size: 16px
-        line-height: 22px
-        margin-bottom: 20px
-      &__price
-        font-size: 16px
-        line-height: 20px
-        margin-bottom: 15px
-      &__image
-        width: 120px
-        height: 200px
-      &__button
-        padding: 7px 17px 7px 17px
-      &__heart
-        margin-left: 20px
-        width: 18px
-        height: 18px
-    &-right
-      width: 280px
+    &-info
+      flex-direction: column
     &-left
-      width: 693px
-    &-cards
-      &__right
-        max-width: 248px
-        height: 140px
-        align-items: center
-      &__title
-        margin-top: 0
-        font-size: 16px
-        line-height: 20px
-        &--8
-          width: 140px
-        &--9
-          width: 125px
-        &--10
-          width: 125px
-      &__price
-        font-size: 16px
-        line-height: 20px
-      &__img
-        width: 95px
-        height: 142px
-        margin-right: 25px
-      &__button
-        font-size: 16px
-        line-height: 22px
-        padding: 7px 17px 7px 17px
-    &-more
-      height: 55px
+      margin-right: 0
+    &-wrapper
+      width: 100%
+      justify-content: space-evenly
+    &-title
+      text-align: center
+  .best
+    margin-top: 25px
+    &__title
+      text-align: center
+    &-card
+      width: 358px
+    &-block
+      align-items: center
+      justify-content: space-between
+      flex-direction: row
+      flex-wrap: wrap
+    &__line
+      flex-basis: 100%
+    &__book
+      flex-basis: 100%
   .category
     &-card
       width: 220px
@@ -91,15 +53,7 @@
     &-slider
       &__button
         &--next
-          margin-left: 935px
-  .unreleased
-    &__books
-      width: 167px
-      height: 260px
-    &-slider
-      &__button
-        width: 48px
-        height: 48px
+          margin-left: 900px
   .history
     &__image
       width: 985px
@@ -442,17 +396,18 @@
       &__image
         width: 160px
         height: 220px
-        margin-left: 208px
+        margin-left: 170px
         margin-right: 0
         object-fit: cover
       &__sold
-        margin-left: 212.62px
+        margin-left: 180px
       &__heart
         margin-left: 19.7px
       &__button
         padding: 7px 25px 7px 25px
     &-cards
       &__right
+        width: 225px
         &--7
           margin-top: 0
           margin-bottom: 36px
@@ -527,14 +482,17 @@
       height: 300px
       margin-bottom: 20px
       &--small
-        width: 272px
+        width: 250px
         height: 172px
     &__author
       &--1
         display: none
     &__play
-      margin-left: 252px
+      margin-left: 225px
       margin-top: -234px
+    &__miniplay
+      margin-left: 120px
+      margin-top: -125px
   .publishers
     &-up
       flex-wrap: wrap
@@ -542,9 +500,55 @@
     &-down
       display: none
   .blog
+    &__title
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+      letter-spacing: 0.2px
     &-wrapper
       flex-direction: column
-
+    &-card
+      &--1
+        width: 520px
+      &--2
+        width: 520px
+      &--3
+        width: 520px
+    &-left
+      margin-bottom: 28px
+      &__image
+        height: 315px
+        margin-bottom: 20px
+      &__title
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0.2px
+        margin-left: 0
+        margin-bottom: 10px
+      &__text
+        font-size: 12px
+        line-height: 24px
+        margin-left: 0
+  .stock
+    &-wrapper
+      width: 100%
+      display: flex
+      flex-direction: column
+    &__title
+      width: 100px
+    &__search
+      margin-right: 0
   .footer
+    &-top
+      display: flex
+      flex-wrap: wrap
+    &__main
+      order: 5
+    &__main
+      margin-right: 0
+    &__list
+      margin-left: 15px
+      margin-right: 100px
+      margin-bottom: 39px
     &-down
       display: none
