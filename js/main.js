@@ -51,7 +51,7 @@ $(document).keyup(function (e) {
         minlength: "The name must be at least 2 letters long",
       },
       email: {
-        required: "Please specify your emai",
+        required: "Please specify your email",
         email: "Email address format: name@domain.com"
       },
       phone: {
@@ -192,4 +192,4 @@ function videoPlay(event) {
    event.target.playVideo();
  }
   
-});S
+});
