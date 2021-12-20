@@ -1,9 +1,22 @@
   $(document).ready(function(){
 var burger = document.querySelector(".burger");
 burger.addEventListener("click", function () {
-  // console.log("клик по кнопке меню");
-  document.querySelector(".navbar-right").classList.toggle("navbar-right--visible");
+  document
+  .querySelector(".navbar-right")
+  .classList.toggle("navbar-right--visible");
 });
+
+const iconMenu = document.querySelector(".burger");
+const menuBody = document.querySelector(".navbar-right");
+const menuLink = $(".navbar-menu__link");
+if (iconMenu) {
+
+menuLink.on("click", closeMenu);
+function closeMenu(event) { // закрытие при клике
+    menuBody.classList.remove("navbar-right--visible");
+
+}
+}
 
 // модальное окно
 var modalButton = $("[data-toggle=modal]");
@@ -37,6 +50,7 @@ $(document).keydown(function (e) {
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+    $("body").removeClass("modal-open");
   }
   });
 
