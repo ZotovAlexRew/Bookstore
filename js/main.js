@@ -31,8 +31,8 @@ function closeModal(event) {
   modalDialog.removeClass("modal__dialog--visible")
   $("body").removeClass("modal-open");
 }
-$(document).keyup(function (e) {
-  if (e.key === "Escape") {
+$(document).keydown(function (e) {
+  if (e.keyCode === 27 ) {
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
@@ -47,17 +47,17 @@ $(document).keyup(function (e) {
     errorClass: "invalid",
     messages: {
       name: {
-        required: "Please specify your name",
-        minlength: "The name must be at least 2 letters long",
+        required: "Ваше полное имя",
+        minlength: "Имя должно состоять не менее чем из двух букв",
       },
       email: {
-        required: "Please specify your email",
-        email: "Email address format: name@domain.com"
+        required: "Ваша почта",
+        email: "Формат почты: name@domain.com"
       },
       phone: {
-        required: "Please specify your phone number",
-        phone: "Phone number format: +7-(999)-999-99-99",
-        minlength: "Please enter at least 11 characters.",
+        required: "Ваш номер телефона",
+        phone: "Формат телефона: +7-(999)-999-99-99",
+        minlength: "Введите не менее 11 символов",
         },
       },
     });

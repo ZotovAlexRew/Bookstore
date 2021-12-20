@@ -152,7 +152,7 @@
   .best
     &-block
       padding-right: 0
-      padding-left: 0
+      padding-left: 9px
   .slide
     &-categories
       &__block
@@ -217,9 +217,8 @@
     &__connection
       order: 5
       margin-top: 50px
-      margin-left: auto
-      margin-right: auto
-      text-align: center
+      flex-basis: 100%
+      align-items: center
     &__descriptions
       flex-wrap: wrap
       justify-content: space-between
@@ -308,6 +307,7 @@
       width: 400px
       padding: 33px 45px
   .categories
+    padding-bottom: 50px
     &__container
       height: 450px
       margin-bottom: 10px
@@ -315,10 +315,10 @@
     &-button
       &--prev
         left: 90px
-        top: 60%
+        top: 95%
       &--next
         right: 90px
-        top: 276px
+        top: 95.5%
   .history
     &__big
       max-width: 100%
@@ -409,9 +409,9 @@
       margin: 0
       margin-bottom: 25px
     &__card
-      width: 210px
+      width: 195px
     &__mini
-      width: 210px
+      width: 195px
   .partners
     &__container
       width: 85%
@@ -509,10 +509,10 @@
         overflow: hidden
 @media (max-width: 480px) and (min-width: 320px)
   .container
-    max-width: 280px
+    max-width: 87.5%
   .thank
     &-container
-      max-width: 280px
+      max-width: 87.5%
   .navbar
     &__mobile
       &--fixed
@@ -631,10 +631,10 @@
     &-button
       &--prev
         left: 70px
-        top: 100%
+        top: 95%
       &--next
-        right: 30px
-        top: 101.3%
+        right: 70px
+        top: 95%
   .history
     &__container
       max-width: 300px
@@ -648,13 +648,15 @@
       line-height: 25px
     &__big
       max-width: 300px
+      height: 210px
       align-items: center
       justify-content: center
       margin-left: auto
       margin-right: auto
     &__video
-      width: 300px
-      height: 210px
+      width: 100%
+      height: 100%
+      object-fit: cover
     &__play
       width: 56px
       height: 56px
@@ -667,8 +669,9 @@
       width: 140px
       height: 140px
     &__img
-      width: 140px
-      height: 140px
+      width: 100%
+      height: 100%
+      object-fit: cover
     &__name
       font-size: 16px
       line-height: 20px
@@ -732,6 +735,7 @@
     &-container
       width: 100%
     &-wrapper
+      border-radius: 0
       &::after
         width: 786px
         height: 786px
