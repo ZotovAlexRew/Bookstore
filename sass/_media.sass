@@ -47,7 +47,7 @@
       flex-basis: 100%
     &__book
       flex-basis: 100%
-  .category
+  .categories
     &__card
       width: 182px
       height: 270px
@@ -58,13 +58,18 @@
     &__text
       font-size: 14px
       line-height: 18px
-    &__button
-      &--prev
-        right: 188px
+  .slide
+    &-button
       &--next
-        right: 107px
+        top: 48%
+        right: 3px
+      &--prev
+        top: 46%
+        left: -26px
   .history
     &__container
+      width: 960px
+    &__about
       width: 960px
     &__big
       width: 960px
@@ -111,7 +116,7 @@
     &-unreleased
       &__wrapp
         margin: 0 auto
-@media (max-width: 992px)
+@media (max-width: 993px)
   .container
     max-width: 737px
   .thank
@@ -407,9 +412,9 @@
       margin: 0
       margin-bottom: 25px
     &__card
-      width: 195px
+      width: 205px
     &__mini
-      width: 195px
+      width: 205px
   .partners
     &__container
       width: 85%
@@ -510,9 +515,9 @@
         align-items: center
     &-categories
       &__block
-        width: 140px
+        width: 135px
         height: 182px
-        padding: 20px 24px 12px 24px
+        padding: 20px 10px
     &__img
       width: 36px
       height: 36px
@@ -626,6 +631,10 @@
     &__price
       font-size: 16px
       line-height: 20px
+      margin-bottom: 21px
+    &__button
+      padding: 7px 28px
+      margin-bottom: 4px
   .further
     padding-top: 14px
     padding-bottom: 14px
@@ -654,15 +663,36 @@
       padding-right: 55px
       padding-top: 0
   .categories
-    padding-bottom: 132px
+    padding-bottom: 130px
+    &__container
+      padding-top: 45px
   .slide
+    &-block
+      &__name
+        font-family: Roboto Condensed
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        letter-spacing: 0.2px
+        &--1
+          margin-bottom: 30px
+      &__subname
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 20px
+        text-align: center
+    &__img
+      margin-bottom: 10px
     &-button
       &--prev
         left: 56px
-        top: 103.5%
+        top: 105.5%
       &--next
         right: 80px
-        top: 104%
+        top: 107%
   .history
     padding-bottom: 35px
     &__container
@@ -837,8 +867,13 @@
       font-size: 16px
       line-height: 22px
       padding: 11px 14px
+  .unreleased
+    &__container
+      padding-bottom: 107px
   .footer
     padding-top: 30px
+    &__descriptions
+      margin-bottom: 0
     &__name
       font-size: 16px
       line-height: 22px
@@ -857,11 +892,14 @@
       margin-bottom: 13px
     &__item
       margin-bottom: 16px
-    .invalid
-      font-size: 12px
+  .invalid
+    font-size: 12px
     &__block
       &-logo
-        margin-bottom: 10p
+        margin-bottom: 10px
+  .modal
+    &__title
+      font-size: 16px
 @media (min-width: 993px)
   .card, .best, .blog
     &__button
@@ -910,6 +948,10 @@
     &__link
       &:hover
         text-decoration: underline
+  .best
+    &__book
+      &:hover
+        text-decoration: underline
   .unreleased
     &__button
       &:hover
@@ -918,3 +960,8 @@
     &__li
       &:hover
         text-decoration: underline
+  .footer
+    &__network
+      &:hover
+        background: $light
+        border: 2px solid #5A7184

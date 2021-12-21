@@ -40,8 +40,21 @@
   &__social
     display: flex
   &__network
-    display: inline-block
-    margin-right: 6px
+    position: relative
+    width: 42px
+    height: 40px
+    background-color: rgba(90, 113, 132, 0.1 )
+    border-radius: 2000px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 8px
+  &__icon
+    position: absolute
+    &-img
+      z-index: 1
+      width: 14px
+      height: 18px
   &__block
     &-logo
       margin-bottom: 26px

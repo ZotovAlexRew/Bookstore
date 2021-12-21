@@ -97,7 +97,7 @@ $(document).keydown(function (e) {
     },
     
     breakpoints: {
-      320: {slidesPerView: 2, slidesPerColumn: 2, spaceBetween: 10},
+      320: {slidesPerView: 2, slidesPerColumn: 2, spaceBetween: 9},
       560: {slidesPerView: 2, slidesPerColumn: 2},      
       767: {slidesPerView: 3, slidesPerColumn: 1, spaceBetween: 0},
       1200: {slidesPerView: 4, slidesPerColumn: 1, spaceBetween: 27}
@@ -205,5 +205,19 @@ $('.history__button--three').on('click', function onYouTubeIframeAPIReady() {
 function videoPlay(event) {
    event.target.playVideo();
  }
+
+ var btn = $(".home");    
+        $(window).scroll(function(e) {  
+          if ($(window).scrollTop() > 700) {  
+          btn.addClass("arrow-up--show");
+        } else {
+          btn.removeClass("arrow-up--show");
+        }
+        });
+          $(".home").click(function(e) {
+            e.preventDefault();
+          $("body,html").animate({scrollTop:0},700);
+          });
+
   
 });
